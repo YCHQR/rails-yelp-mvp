@@ -1,0 +1,13 @@
+<h1>Restaurants</h1>
+
+<div class="container">
+
+  <ul class="row text-center">
+    <% @restaurants.each do |restaurant|  %>
+    <div class="col alert alert-primary text-center m-2 align-middle">
+      <label for="completed" class="align-middle"><%= link_to "#{restaurant.name}", restaurant_path(restaurant) %></label>
+    </div>
+    <% end %>
+  </ul>
+  <%= link_to "Create new restaurant", new_restaurant_path %>
+</div>

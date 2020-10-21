@@ -1,0 +1,7 @@
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: 'Please enter your username', error: 'You need to enter your username to continue' %>
+  <%= f.input :address, hint: 'No special characters.' %>
+  <%= f.input :phone_number, placeholder: '00 39 1 23 45 67' %>
+  <%= f.input :category, collection: Restaurant::CATEGORY %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
